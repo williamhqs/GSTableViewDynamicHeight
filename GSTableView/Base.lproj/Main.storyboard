@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GSTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IDy-Dc-MNd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="comments_cell" rowHeight="124" id="s6E-zi-i3x" customClass="GSTableViewCell" customModule="GSTableView" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s6E-zi-i3x" id="Gbt-cY-G1c">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-h9-t06">
+                                                    <rect key="frame" x="2" y="25" width="596" height="97"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lof-9N-tW3">
+                                                    <rect key="frame" x="2" y="2" width="596" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="rco-To-wgV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="sf3-h9-t06" secondAttribute="trailing" constant="2" id="KS5-Mx-XYp"/>
+                                                <constraint firstItem="lof-9N-tW3" firstAttribute="leading" secondItem="Gbt-cY-G1c" secondAttribute="leading" constant="2" id="KyS-Ft-faP"/>
+                                                <constraint firstItem="sf3-h9-t06" firstAttribute="leading" secondItem="Gbt-cY-G1c" secondAttribute="leading" constant="2" id="f0D-cf-zF8"/>
+                                                <constraint firstAttribute="bottom" secondItem="sf3-h9-t06" secondAttribute="bottom" constant="2" id="igi-Cn-J8V"/>
+                                                <constraint firstItem="sf3-h9-t06" firstAttribute="top" secondItem="lof-9N-tW3" secondAttribute="bottom" constant="2" id="qdc-hS-XVx"/>
+                                                <constraint firstAttribute="trailing" secondItem="lof-9N-tW3" secondAttribute="trailing" constant="2" id="u2J-ME-XVQ"/>
+                                                <constraint firstItem="lof-9N-tW3" firstAttribute="top" secondItem="Gbt-cY-G1c" secondAttribute="top" constant="2" id="zVU-Qc-vse"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="content" destination="sf3-h9-t06" id="pqx-nA-ww3"/>
+                                            <outlet property="name" destination="lof-9N-tW3" id="Qim-Eb-TYz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="yLL-3G-rre"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="7Ec-Hn-Usb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IDy-Dc-MNd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="I6c-nY-CWQ"/>
+                            <constraint firstAttribute="trailing" secondItem="IDy-Dc-MNd" secondAttribute="trailing" id="WeU-Oi-kvf"/>
+                            <constraint firstItem="IDy-Dc-MNd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="sEg-M8-CyK"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IDy-Dc-MNd" secondAttribute="bottom" id="wJT-jj-p9Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="IDy-Dc-MNd" id="k1y-Y7-z20"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
